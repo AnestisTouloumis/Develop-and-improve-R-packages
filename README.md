@@ -72,3 +72,13 @@ Workflow:
 devtools::spell_check(".")
 spelling::spell_check_package(".")
 ```
+
+## Other Resources
+
+  - <https://www.r-bloggers.com/automatic-tools-for-improving-r-packages/>
+  - <https://www.r-bloggers.com/some-ideas-for-your-internal-r-package/>
+  - <https://www.r-bloggers.com/dealing-with-s3-methods-in-r-with-a-simple-example/>
+  - <https://www.r-bloggers.com/mit-step-by-step-instructions-for-creating-your-own-r-package/>
+  - <https://www.r-bloggers.com/seeking-guidance-in-choosing-and-evaluating-r-packages/>
+  - <https://www.r-bloggers.com/how-to-develop-good-r-packages-for-open-science/>
+  - <https://github.com/ropensci/software-review>
