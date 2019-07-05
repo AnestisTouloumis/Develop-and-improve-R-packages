@@ -1,33 +1,37 @@
 Automatic tools and information for creating and improving R packages
 ================
 
-This document includes some automatic tools, resources about my workflow
-when I create or improve an R package. screenshots of my preferred
-RStudio configuration. It heavily relies on this
-[post](https://drdoane.com/my-rstudio-configuration/) by William Diane.
-Details about the different options can be found
-[here](https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio).
+This document relies heavily on two posts:
+
+  - [Automatic tools for improving R
+    packages](https://www.r-bloggers.com/automatic-tools-for-improving-r-packages/)
+  - [How to develop good R packages (for open
+    science)](https://www.r-bloggers.com/how-to-develop-good-r-packages-for-open-science/)
 
 ## Creating R package
 
-  - [R-packages](http://r-pkgs.had.co.nz/) book by Hadley Wickham.
+  - [Writing an R package from
+    scratch](https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/)
+  - [R Package Development
+    Pictorial](http://www.mjdenny.com/R_Package_Pictorial.html)
+  - [R-packages](http://r-pkgs.had.co.nz/) book by Hadley Wickham
   - [MIT Step by Step Instructions for Creating Your Own R
     Package](http://web.mit.edu/insong/www/pdf/rpackage_instructions.pdf)
-    by Kim, Martin, McMurry and Halterman.
+    by Kim, Martin, McMurry and Halterman
   - R package
     [usethis](https://www.tidyverse.org/articles/2017/11/usethis-1.0.0/)
     automates several steps described in
-    [R-packages](http://r-pkgs.had.co.nz/).
+    [R-packages](http://r-pkgs.had.co.nz/)
   - [rOpenSci Packaging
     Guide](https://devguide.ropensci.org/building.html) by rOpenSci
-    community.
+    community
 
 ## Styling Code
 
   - R package [lintr](https://github.com/jimhester/lintr) for static
-    code analysis.
+    code analysis
   - R package [style](https://github.com/r-lib/styler) or the R function
-    `usethis::use_tidy_style()` to prettify code.
+    `usethis::use_tidy_style()` to prettify code
 
 Workflow:
 
@@ -40,10 +44,10 @@ lintr::lint_package()
 
   - [Travis CI
     guide](https://docs.travis-ci.com/user/languages/r/#configuration-options)
-    by Travis-CI.
+    by Travis-CI
   - [Advanced
     guide](https://towardsdatascience.com/travis-ci-for-r-advanced-guide-719cb2d9e0e5)
-    by Sebastian Wolf.
+    by Sebastian Wolf
 
 Personal configuration for `.travis.yml` file:
 
@@ -73,12 +77,31 @@ devtools::spell_check(".")
 spelling::spell_check_package(".")
 ```
 
-## Other Resources
+## Automatic advice
 
-  - <https://www.r-bloggers.com/automatic-tools-for-improving-r-packages/>
-  - <https://www.r-bloggers.com/some-ideas-for-your-internal-r-package/>
-  - <https://www.r-bloggers.com/dealing-with-s3-methods-in-r-with-a-simple-example/>
-  - <https://www.r-bloggers.com/mit-step-by-step-instructions-for-creating-your-own-r-package/>
-  - <https://www.r-bloggers.com/seeking-guidance-in-choosing-and-evaluating-r-packages/>
-  - <https://www.r-bloggers.com/how-to-develop-good-r-packages-for-open-science/>
-  - <https://github.com/ropensci/software-review>
+  - R package
+    [`goodpractice`](https://cran.r-project.org/web/packages/goodpractice/index.html)
+
+Workflow:
+
+``` r
+goodpractice::gp(".")
+```
+
+## Static html documentation
+
+  - R package
+    [`pkgdown`](https://cran.r-project.org/web/packages/pkgbuild/index.html)
+  - `pkgdown`
+    [tutorial](https://enpiar.com/2017/11/21/getting-down-with-pkgdown/)
+
+<!-- end list -->
+
+``` r
+pkgdown::init()
+pkgdown::build_site()
+```
+
+## GitHub
+
+  - [Happy Git and GitHub for the useR](https://happygitwithr.com/)
